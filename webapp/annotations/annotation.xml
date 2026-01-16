@@ -51,9 +51,11 @@
                             <PropertyValue Property="Label" String="Supplier Name"/>
                             <PropertyValue Property="Value" Path="ProveedorDescription"/>
                         </Record>
-                        <Record Type="UI.DataField">
+                        <Record Type="UI.DataPoint">
                             <PropertyValue Property="Label" String="Status"/>
                             <PropertyValue Property="Value" Path="Status"/>
+                            <PropertyValue Property="Criticality" Path="StatusCriticality"/>
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/>
                         </Record>
                     </Collection>
                 </Annotation>
@@ -66,6 +68,8 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="Status"/>
                             <PropertyValue Property="Value" Path="Status"/>
+                            <PropertyValue Property="Criticality" Path="StatusCriticality"/>
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/>
                         </Record>
                     </Collection>
                 </Annotation>

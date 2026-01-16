@@ -67,6 +67,7 @@
                 <Property Name="IdProveedor" Type="Edm.String" Nullable="false" MaxLength="40"/>
                 <Property Name="ProveedorDescription" Type="Edm.String" MaxLength="40"/>
                 <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="10" DefaultValue="DRAFT" sap:label="Status"/>
+                <Property Name="StatusCriticality" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:label="Status criticality"/>
                 <Property Name="IsSubmitAllowed" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:label="Submit allowed"/>
                 <Property Name="IsApprovalAllowed" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:label="Approval allowed"/>
                 <Property Name="IsBlockingAllowed" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:label="Blocking allowed"/>
