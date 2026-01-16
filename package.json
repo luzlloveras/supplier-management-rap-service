@@ -20,14 +20,14 @@
         "mbt": "^1.2.18"
     },
     "scripts": {
-        "start": "fiori run --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#materialbysupplier-tile\"",
-        "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#materialbysupplier-tile\"",
+        "start": "npx fiori run --config ./ui5-mock.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#materialbysupplier-tile\"",
+        "start-local": "npx fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#materialbysupplier-tile\"",
         "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
-        "deploy": "fiori cfDeploy",
-        "deploy-config": "fiori add deploy-config",
-        "start-noflp": "fiori run --open \"index.html?sap-ui-xx-viewCache=false\"",
-        "start-mock": "fiori run --config ./ui5-mock.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#materialbysupplier-tile\"",
-        "start-variants-management": "fiori run --open \"preview.html?sap-ui-xx-viewCache=false&fiori-tools-rta-mode=true&sap-ui-rta-skip-flex-validation=true#preview-app\"",
+        "deploy": "npx fiori cfDeploy",
+        "deploy-config": "npx fiori add deploy-config",
+        "start-noflp": "npx fiori run --open \"index.html?sap-ui-xx-viewCache=false\"",
+        "start-mock": "npx fiori run --config ./ui5-mock.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#materialbysupplier-tile\"",
+        "start-variants-management": "npx fiori run --open \"preview.html?sap-ui-xx-viewCache=false&fiori-tools-rta-mode=true&sap-ui-rta-skip-flex-validation=true#preview-app\"",
         "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo",
         "build:mta": "rimraf resources mta_archives && mbt build",
         "undeploy": "cf undeploy materialbysupplier --delete-services --delete-service-keys --delete-service-brokers"

@@ -1,0 +1,26 @@
+[
+    {
+        "Matnr": "MAT100",
+        "IdProveedor": "SUP1000",
+        "MaterialDescription": "Bearing Housing Assembly",
+        "ProveedorDescription": "Atlas Components Ltd.",
+        "Stock": "120",
+        "PrecioUnitario": "450.00"
+    },
+    {
+        "Matnr": "MAT200",
+        "IdProveedor": "SUP2000",
+        "MaterialDescription": "Stainless Steel Fastener",
+        "ProveedorDescription": "Northwind Metals Group",
+        "Stock": "080",
+        "PrecioUnitario": "300.00"
+    },
+    {
+        "Matnr": "MAT300",
+        "IdProveedor": "SUP3000",
+        "MaterialDescription": "Engineering Polymer Sleeve",
+        "ProveedorDescription": "Blue Harbor Plastics Co.",
+        "Stock": "040",
+        "PrecioUnitario": "125.00"
+    }
+]

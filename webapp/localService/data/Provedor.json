@@ -1,0 +1,17 @@
+[
+    {
+        "IdProveedor": "SUP1000",
+        "ProveedorDescription": "Atlas Components Ltd.",
+        "Status": "DRAFT"
+    },
+    {
+        "IdProveedor": "SUP2000",
+        "ProveedorDescription": "Northwind Metals Group",
+        "Status": "ACTIVE"
+    },
+    {
+        "IdProveedor": "SUP3000",
+        "ProveedorDescription": "Blue Harbor Plastics Co.",
+        "Status": "BLOCKED"
+    }
+]

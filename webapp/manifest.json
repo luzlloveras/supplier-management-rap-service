@@ -50,8 +50,8 @@
                         "parameters": {},
                         "additionalParameters": "allowed"
                     },
-                    "semanticObject": "zmat_prov",
-                    "action": "mantain",
+                    "semanticObject": "supplier_management",
+                    "action": "manage",
                     "title": "{{flpTitle}}",
                     "subTitle": "{{flpSubtitle}}",
                     "icon": ""

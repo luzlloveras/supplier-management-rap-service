@@ -30,16 +30,16 @@
                 <Annotation Term="UI.Facets">
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Matnr"/>
-                            <PropertyValue Property="ID" String="Matnr"/>
+                            <PropertyValue Property="Label" String="Material Number"/>
+                            <PropertyValue Property="ID" String="MaterialNumber"/>
                             <PropertyValue Property="Target" AnnotationPath="@UI.Identification"/>
                         </Record>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.HeaderInfo">
                     <Record>
-                        <PropertyValue Property="TypeName" String="Materiales"/>
-                        <PropertyValue Property="TypeNamePlural" String="Materiales"/>
+                        <PropertyValue Property="TypeName" String="Material"/>
+                        <PropertyValue Property="TypeNamePlural" String="Materials"/>
                         <PropertyValue Property="Title">
                             <Record Type="UI.DataField">
                                 <PropertyValue Property="Label" String="Material Number"/>
@@ -62,6 +62,7 @@
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Material Description"/>
                             <PropertyValue Property="Value" Path="MaterialDescription"/>
                         </Record>
                     </Collection>
@@ -88,21 +89,21 @@
                 <Annotation Term="UI.Facets">
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Matnr"/>
-                            <PropertyValue Property="ID" String="Matnr"/>
+                            <PropertyValue Property="Label" String="Material Number"/>
+                            <PropertyValue Property="ID" String="MaterialNumber"/>
                             <PropertyValue Property="Target" AnnotationPath="@UI.Identification"/>
                         </Record>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="IdProveedor"/>
-                            <PropertyValue Property="ID" String="IdProveedor"/>
+                            <PropertyValue Property="Label" String="Supplier ID"/>
+                            <PropertyValue Property="ID" String="SupplierId"/>
                             <PropertyValue Property="Target" AnnotationPath="@UI.Identification"/>
                         </Record>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.HeaderInfo">
                     <Record>
-                        <PropertyValue Property="TypeName" String="Materiales por proveedor"/>
-                        <PropertyValue Property="TypeNamePlural" String="Materiales por proveedor"/>
+                        <PropertyValue Property="TypeName" String="Material by Supplier"/>
+                        <PropertyValue Property="TypeNamePlural" String="Materials by Supplier"/>
                         <PropertyValue Property="Title">
                             <Record Type="UI.DataField">
                                 <PropertyValue Property="Label" String="Material Number"/>
@@ -114,7 +115,7 @@
                 <Annotation Term="UI.Identification">
                     <Collection>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="ID Proveedor"/>
+                            <PropertyValue Property="Label" String="Supplier ID"/>
                             <PropertyValue Property="Value" Path="IdProveedor"/>
                         </Record>
                         <Record Type="UI.DataField">
@@ -122,15 +123,19 @@
                             <PropertyValue Property="Value" Path="Matnr"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Material Description"/>
                             <PropertyValue Property="Value" Path="MaterialDescription"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Supplier Name"/>
                             <PropertyValue Property="Value" Path="ProveedorDescription"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Stock"/>
                             <PropertyValue Property="Value" Path="Stock"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Unit Price"/>
                             <PropertyValue Property="Value" Path="PrecioUnitario"/>
                         </Record>
                     </Collection>
@@ -138,15 +143,19 @@
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Material Description"/>
                             <PropertyValue Property="Value" Path="MaterialDescription"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Supplier Name"/>
                             <PropertyValue Property="Value" Path="ProveedorDescription"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Stock"/>
                             <PropertyValue Property="Value" Path="Stock"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Unit Price"/>
                             <PropertyValue Property="Value" Path="PrecioUnitario"/>
                         </Record>
                     </Collection>
@@ -159,6 +168,11 @@
                                     <PropertyValue Property="Property" PropertyPath="Matnr"/>
                                     <PropertyValue Property="Descending" Bool="false"/>
                                 </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.LineItem</AnnotationPath>
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -176,19 +190,19 @@
                 <Annotation Term="UI.Facets">
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="IdProveedor"/>
-                            <PropertyValue Property="ID" String="IdProveedor"/>
+                            <PropertyValue Property="Label" String="Supplier ID"/>
+                            <PropertyValue Property="ID" String="SupplierId"/>
                             <PropertyValue Property="Target" AnnotationPath="@UI.Identification"/>
                         </Record>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.HeaderInfo">
                     <Record>
-                        <PropertyValue Property="TypeName" String="Proveedores"/>
-                        <PropertyValue Property="TypeNamePlural" String="Proveedores"/>
+                        <PropertyValue Property="TypeName" String="Supplier"/>
+                        <PropertyValue Property="TypeNamePlural" String="Suppliers"/>
                         <PropertyValue Property="Title">
                             <Record Type="UI.DataField">
-                                <PropertyValue Property="Label" String="ID Proveedor"/>
+                                <PropertyValue Property="Label" String="Supplier ID"/>
                                 <PropertyValue Property="Value" Path="IdProveedor"/>
                             </Record>
                         </PropertyValue>
@@ -197,18 +211,28 @@
                 <Annotation Term="UI.Identification">
                     <Collection>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="ID Proveedor"/>
+                            <PropertyValue Property="Label" String="Supplier ID"/>
                             <PropertyValue Property="Value" Path="IdProveedor"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Supplier Name"/>
                             <PropertyValue Property="Value" Path="ProveedorDescription"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Status"/>
+                            <PropertyValue Property="Value" Path="Status"/>
                         </Record>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Supplier Name"/>
                             <PropertyValue Property="Value" Path="ProveedorDescription"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Status"/>
+                            <PropertyValue Property="Value" Path="Status"/>
                         </Record>
                     </Collection>
                 </Annotation>
@@ -227,6 +251,25 @@
                 <Annotation Term="UI.SelectionFields">
                     <Collection>
                         <PropertyPath>ProveedorDescription</PropertyPath>
+                        <PropertyPath>Status</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zmara_service_definition.ProvedorType/Status">
+                <Annotation Term="Validation.AllowedValues">
+                    <Collection>
+                        <Record Type="Validation.AllowedValue">
+                            <PropertyValue Property="Value" String="DRAFT"/>
+                            <PropertyValue Property="Description" String="Draft"/>
+                        </Record>
+                        <Record Type="Validation.AllowedValue">
+                            <PropertyValue Property="Value" String="ACTIVE"/>
+                            <PropertyValue Property="Description" String="Active"/>
+                        </Record>
+                        <Record Type="Validation.AllowedValue">
+                            <PropertyValue Property="Value" String="BLOCKED"/>
+                            <PropertyValue Property="Description" String="Blocked"/>
+                        </Record>
                     </Collection>
                 </Annotation>
             </Annotations>

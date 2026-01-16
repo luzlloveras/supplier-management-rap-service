@@ -1,0 +1,14 @@
+[
+    {
+        "Matnr": "MAT100",
+        "MaterialDescription": "Bearing Housing Assembly"
+    },
+    {
+        "Matnr": "MAT200",
+        "MaterialDescription": "Stainless Steel Fastener"
+    },
+    {
+        "Matnr": "MAT300",
+        "MaterialDescription": "Engineering Polymer Sleeve"
+    }
+]

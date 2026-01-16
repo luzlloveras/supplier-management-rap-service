@@ -66,6 +66,7 @@
                 </Key>
                 <Property Name="IdProveedor" Type="Edm.String" Nullable="false" MaxLength="40"/>
                 <Property Name="ProveedorDescription" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="10" DefaultValue="DRAFT" sap:label="Status"/>
             </EntityType>
             <EntityType Name="SAP__Currency" sap:content-version="1">
                 <Key>
@@ -623,8 +624,8 @@
                 </Annotation>
                 <Annotation Term="SAP__common.ValueListWithFixedValues"/>
             </Annotations>
-            <atom:link rel="self" href="https://95dd8c1f-9cd4-4de9-b928-0b89cd0c49b3.abap.eu10.hana.ondemand.com/sap/opu/odata/sap/ZMARA_SERVICE_BINDING/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
-            <atom:link rel="latest-version" href="https://95dd8c1f-9cd4-4de9-b928-0b89cd0c49b3.abap.eu10.hana.ondemand.com/sap/opu/odata/sap/ZMARA_SERVICE_BINDING/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="self" href="http://localhost:8080/sap/opu/odata/sap/ZMARA_SERVICE_BINDING/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://localhost:8080/sap/opu/odata/sap/ZMARA_SERVICE_BINDING/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
