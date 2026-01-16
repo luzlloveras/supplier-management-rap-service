@@ -135,8 +135,8 @@
             "showDraftToggle": false
         },
         "pages": {
-            "ListReport|MatProv": {
-                "entitySet": "MatProv",
+            "ListReport|Provedor": {
+                "entitySet": "Provedor",
                 "component": {
                     "name": "sap.suite.ui.generic.template.ListReport",
                     "list": true,
@@ -152,8 +152,8 @@
                     }
                 },
                 "pages": {
-                    "ObjectPage|MatProv": {
-                        "entitySet": "MatProv",
+                    "ObjectPage|Provedor": {
+                        "entitySet": "Provedor",
                         "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
                         "component": {
                             "name": "sap.suite.ui.generic.template.ObjectPage"
