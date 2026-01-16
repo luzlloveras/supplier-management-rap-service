@@ -222,6 +222,16 @@
                             <PropertyValue Property="Label" String="Status"/>
                             <PropertyValue Property="Value" Path="Status"/>
                         </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="Approve"/>
+                            <PropertyValue Property="Action" String="cds_zmara_service_definition.approveSupplier"/>
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="Block"/>
+                            <PropertyValue Property="Action" String="cds_zmara_service_definition.blockSupplier"/>
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+                        </Record>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.LineItem">
