@@ -1,53 +1,27 @@
-## Application Details
-|               |
-| ------------- |
-|**Generation Date and Time**<br>Mon Jul 10 2023 19:22:16 GMT+0000 (Coordinated Universal Time)|
-|**App Generator**<br>@sap/generator-fiori-elements|
-|**App Generator Version**<br>1.10.1|
-|**Generation Platform**<br>SAP Business Application Studio|
-|**Template Used**<br>List Report Page V2|
-|**Service Type**<br>SAP System (ABAP On Premise)|
-|**Service URL**<br>http://localhost:8080/sap/opu/odata/sap/ZMARA_SERVICE_BINDING
-|**Module Name**<br>material_by_supplier|
-|**Application Title**<br>Supplier Management|
-|**Namespace**<br>|
-|**UI5 Theme**<br>sap_horizon|
-|**UI5 Version**<br>1.111.5|
-|**Enable Code Assist Libraries**<br>False|
-|**Enable TypeScript**<br>False|
-|**Add Eslint configuration**<br>False|
-|**Main Entity**<br>MatProv|
-|**Navigation Entity**<br>None|
+Supplier Management RAP service (backend)
+This service focuses on supplier onboarding and lifecycle control.
+Suppliers are the primary entity; material data is secondary context.
+Status is enforced through explicit actions and guarded transitions.
+New suppliers default to DRAFT to reflect review steps.
+Business rules remain small and concrete for interview-ready clarity.
+The service is intentionally scoped to highlight RAP behaviors.
 
-## material_by_supplier
-
-A compact Fiori application for supplier lifecycle management.
+Supplier lifecycle
+Suppliers start in DRAFT and can be submitted for review without changing status.
+Approval moves a supplier to ACTIVE, blocking moves to BLOCKED, and unblocking returns to ACTIVE.
 
 ## What this service demonstrates
-- RAP BO modeling
-- Status lifecycle with custom actions
+- Supplier lifecycle (status)
+- Custom actions (submit/approve/block/unblock)
 - Minimal business validations
+- Supplier-first domain focus
 
-### Starting the generated app
-
--   This app runs locally with mock data by default. To launch it, run the following from the app root folder:
-
+## How to run
 ```
-    npm start
-```
-
-- If you want the explicit mock command, run:
-```
-    npm run start-mock
+npm install
+npm start
 ```
 
-Example action call (mock server):
-```
-    curl -X POST "http://localhost:8080/sap/opu/odata/sap/ZMARA_SERVICE_BINDING/Provedor('SUP-1000')/approveSupplier"
-```
-
-#### Pre-requisites:
-
-1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
-
-
+## Related repository
+UI extension: https://github.com/luzlloveras/material-supplier-ui-extension  
+This repo provides the UI extension; this repo is the backend RAP service.
