@@ -67,8 +67,10 @@
                 <Property Name="IdProveedor" Type="Edm.String" Nullable="false" MaxLength="40"/>
                 <Property Name="ProveedorDescription" Type="Edm.String" MaxLength="40"/>
                 <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="10" DefaultValue="DRAFT" sap:label="Status"/>
+                <Property Name="IsSubmitAllowed" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:label="Submit allowed"/>
                 <Property Name="IsApprovalAllowed" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:label="Approval allowed"/>
                 <Property Name="IsBlockingAllowed" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:label="Blocking allowed"/>
+                <Property Name="IsUnblockingAllowed" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:label="Unblocking allowed"/>
             </EntityType>
             <EntityType Name="SAP__Currency" sap:content-version="1">
                 <Key>
@@ -327,8 +329,10 @@
                 <EntitySet Name="Mara" EntityType="cds_zmara_service_definition.MaraType" sap:searchable="true" sap:content-version="1"/>
                 <EntitySet Name="MatProv" EntityType="cds_zmara_service_definition.MatProvType" sap:searchable="true" sap:content-version="1"/>
                 <EntitySet Name="Provedor" EntityType="cds_zmara_service_definition.ProvedorType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
-                <FunctionImport Name="approveSupplier" ReturnType="cds_zmara_service_definition.ProvedorType" EntitySet="Provedor" m:HttpMethod="POST" sap:action-for="cds_zmara_service_definition.ProvedorType" sap:applicable-path="IsApprovalAllowed" sap:label="Approve supplier"/>
-                <FunctionImport Name="blockSupplier" ReturnType="cds_zmara_service_definition.ProvedorType" EntitySet="Provedor" m:HttpMethod="POST" sap:action-for="cds_zmara_service_definition.ProvedorType" sap:applicable-path="IsBlockingAllowed" sap:label="Block supplier"/>
+                <FunctionImport Name="submitForReview" ReturnType="cds_zmara_service_definition.ProvedorType" EntitySet="Provedor" m:HttpMethod="POST" sap:action-for="cds_zmara_service_definition.ProvedorType" sap:applicable-path="IsSubmitAllowed" sap:label="Submit for review"/>
+                <FunctionImport Name="approve" ReturnType="cds_zmara_service_definition.ProvedorType" EntitySet="Provedor" m:HttpMethod="POST" sap:action-for="cds_zmara_service_definition.ProvedorType" sap:applicable-path="IsApprovalAllowed" sap:label="Approve supplier"/>
+                <FunctionImport Name="block" ReturnType="cds_zmara_service_definition.ProvedorType" EntitySet="Provedor" m:HttpMethod="POST" sap:action-for="cds_zmara_service_definition.ProvedorType" sap:applicable-path="IsBlockingAllowed" sap:label="Block supplier"/>
+                <FunctionImport Name="unblock" ReturnType="cds_zmara_service_definition.ProvedorType" EntitySet="Provedor" m:HttpMethod="POST" sap:action-for="cds_zmara_service_definition.ProvedorType" sap:applicable-path="IsUnblockingAllowed" sap:label="Unblock supplier"/>
                 <AssociationSet Name="to_FooterSet" Association="cds_zmara_service_definition.to_Footer" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_Footer"/>
                     <End EntitySet="SAP__PDFFooterSet" Role="ToRole_to_Footer"/>

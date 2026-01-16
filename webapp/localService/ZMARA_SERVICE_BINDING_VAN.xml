@@ -223,13 +223,23 @@
                             <PropertyValue Property="Value" Path="Status"/>
                         </Record>
                         <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="Submit for Review"/>
+                            <PropertyValue Property="Action" String="cds_zmara_service_definition.submitForReview"/>
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
                             <PropertyValue Property="Label" String="Approve"/>
-                            <PropertyValue Property="Action" String="cds_zmara_service_definition.approveSupplier"/>
+                            <PropertyValue Property="Action" String="cds_zmara_service_definition.approve"/>
                             <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
                         </Record>
                         <Record Type="UI.DataFieldForAction">
                             <PropertyValue Property="Label" String="Block"/>
-                            <PropertyValue Property="Action" String="cds_zmara_service_definition.blockSupplier"/>
+                            <PropertyValue Property="Action" String="cds_zmara_service_definition.block"/>
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="Unblock"/>
+                            <PropertyValue Property="Action" String="cds_zmara_service_definition.unblock"/>
                             <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
                         </Record>
                     </Collection>

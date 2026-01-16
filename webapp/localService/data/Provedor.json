@@ -3,21 +3,27 @@
         "IdProveedor": "SUP1000",
         "ProveedorDescription": "Atlas Components Ltd.",
         "Status": "DRAFT",
+        "IsSubmitAllowed": true,
         "IsApprovalAllowed": true,
-        "IsBlockingAllowed": false
+        "IsBlockingAllowed": false,
+        "IsUnblockingAllowed": false
     },
     {
         "IdProveedor": "SUP2000",
         "ProveedorDescription": "Northwind Metals Group",
         "Status": "ACTIVE",
+        "IsSubmitAllowed": false,
         "IsApprovalAllowed": false,
-        "IsBlockingAllowed": true
+        "IsBlockingAllowed": true,
+        "IsUnblockingAllowed": false
     },
     {
         "IdProveedor": "SUP3000",
         "ProveedorDescription": "Blue Harbor Plastics Co.",
         "Status": "BLOCKED",
+        "IsSubmitAllowed": false,
         "IsApprovalAllowed": false,
-        "IsBlockingAllowed": false
+        "IsBlockingAllowed": false,
+        "IsUnblockingAllowed": true
     }
 ]
