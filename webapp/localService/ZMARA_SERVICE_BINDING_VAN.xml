@@ -293,6 +293,9 @@
                     </Collection>
                 </Annotation>
             </Annotations>
+            <Annotations Target="cds_zmara_service_definition.ProvedorType/ProveedorDescription">
+                <Annotation Term="Validation.Required" Bool="true"/>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
