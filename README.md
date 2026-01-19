@@ -22,6 +22,12 @@ npm install
 npm start
 ```
 
+## Configuration
+`apikey` is read from an environment variable at runtime and should not be committed.
+GA5 uses a local SQLite database for development and testing.
+`.env.example` documents the expected key name for local development.
+Keep credentials outside the codebase.
+
 ## Related repository
 UI extension: https://github.com/luzlloveras/material-supplier-ui-extension  
 This repo provides the UI extension; this repo is the backend RAP service.
