@@ -3,6 +3,9 @@
     <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value">
         <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
     </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="Core"/>
+    </edmx:Reference>
     <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value">
         <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
     </edmx:Reference>
@@ -208,6 +211,14 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="Status">
+                    <Record>
+                        <PropertyValue Property="Title" String="Status"/>
+                        <PropertyValue Property="Value" Path="Status"/>
+                        <PropertyValue Property="Criticality" Path="StatusCriticality"/>
+                        <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/>
+                    </Record>
+                </Annotation>
                 <Annotation Term="UI.Identification">
                     <Collection>
                         <Record Type="UI.DataField">
@@ -218,11 +229,9 @@
                             <PropertyValue Property="Label" String="Supplier Name"/>
                             <PropertyValue Property="Value" Path="ProveedorDescription"/>
                         </Record>
-                        <Record Type="UI.DataPoint">
+                        <Record Type="UI.DataFieldForAnnotation">
                             <PropertyValue Property="Label" String="Status"/>
-                            <PropertyValue Property="Value" Path="Status"/>
-                            <PropertyValue Property="Criticality" Path="StatusCriticality"/>
-                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#Status"/>
                         </Record>
                         <Record Type="UI.DataFieldForAction">
                             <PropertyValue Property="Label" String="Submit for Review"/>
@@ -252,11 +261,9 @@
                             <PropertyValue Property="Label" String="Supplier Name"/>
                             <PropertyValue Property="Value" Path="ProveedorDescription"/>
                         </Record>
-                        <Record Type="UI.DataField">
+                        <Record Type="UI.DataFieldForAnnotation">
                             <PropertyValue Property="Label" String="Status"/>
-                            <PropertyValue Property="Value" Path="Status"/>
-                            <PropertyValue Property="Criticality" Path="StatusCriticality"/>
-                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#Status"/>
                         </Record>
                     </Collection>
                 </Annotation>
@@ -278,6 +285,18 @@
                         <PropertyPath>Status</PropertyPath>
                     </Collection>
                 </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zmara_service_definition.submitForReview">
+                <Annotation Term="Core.OperationAvailable" Path="IsSubmitAllowed"/>
+            </Annotations>
+            <Annotations Target="cds_zmara_service_definition.approve">
+                <Annotation Term="Core.OperationAvailable" Path="IsApprovalAllowed"/>
+            </Annotations>
+            <Annotations Target="cds_zmara_service_definition.block">
+                <Annotation Term="Core.OperationAvailable" Path="IsBlockingAllowed"/>
+            </Annotations>
+            <Annotations Target="cds_zmara_service_definition.unblock">
+                <Annotation Term="Core.OperationAvailable" Path="IsUnblockingAllowed"/>
             </Annotations>
             <Annotations Target="cds_zmara_service_definition.ProvedorType/Status">
                 <Annotation Term="Validation.AllowedValues">
